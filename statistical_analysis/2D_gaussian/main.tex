@@ -1,0 +1,16 @@
+\documentclass{article}
+
+\usepackage{tikz,pgfplots,pgf}
+\pgfplotsset{compat=newest}
+
+\begin{document}
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=1.]
+  \begin{axis}[xlabel=$\Re e(x)$,ylabel=$\Im m(x)$,zmin=0,zmax=0.15]
+   \addplot3[surf,mesh/rows=40,shader=faceted,z buffer=sort] table[col sep=comma] {2D_gaussian.csv};
+  \end{axis}
+ \end{tikzpicture} 
+ \caption{Complex Gaussian pdf.\label{figurecostf}}
+ \end{figure}
+ \end{document}
